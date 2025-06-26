@@ -1,0 +1,42 @@
+# Archivos de configuración de VisualStudio/Rider/VS Code
+.vs/
+.idea/
+.vscode/
+.vsconfig
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Carpetas de caché de Visual Studio
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Archivos temporales de Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

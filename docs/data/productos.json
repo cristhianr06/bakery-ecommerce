@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cake de Almendras y Caramelo",
+    "descripcion": "Delicioso bizcocho elaborado con harina de almendras, endulzado naturalmente, cubierto con frosting de chocolate blanco sin azúcar y yogurt griego. Ideal para dietas bajas en carbohidratos y sin gluten.",
+    "precio": 38.000,
+    "categoria": "pasteles",
+    "imagen": "red-velvet-cupcake.jpg",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Volcán de Arequipe Keto",
+    "descripcion": "Bizcocho suave hecho con harina de almendras y endulzado con stevia, relleno de arequipe sin azúcar y nueces, perfecto para quienes buscan opciones saludables y libres de gluten.",
+    "precio": 35.000,
+    "categoria": "postres",
+    "imagen": "cheesecake-limon.jpg",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Torta de Zanahoria",
+    "descripcion": "Bizcocho especiado con zanahoria y anis, cubierto con crema de coco y ralladura de coco. Sin gluten, sin azúcar añadida y apto para diabéticos",
+    "precio": 40.000,
+    "categoria": "pasteles",
+    "imagen": "cheesecake-limon.jpg",
+    "destacado": true
+  },
+  {
+    "id": 4,
+    "nombre": "Brownie Melcochudo con Nueces",
+    "descripcion": "Brownie denso y húmedo, endulzado con estevia y compota de manzana, cubierto con crema de chocolate o arequipe y nueces tostadas. Sin gluten, sin azúcar añadida y sin lácteos",
+    "precio": 38.000,
+    "categoria": "postres",
+    "imagen": "red-velvet-cupcake.jpg",
+    "destacado": true
+  },
+  {
+    "id": 5,
+    "nombre": "Pan de Banano y Nueces",
+    "descripcion": "Pan esponjoso elaborado con harina de almendras o coco, plátano maduro y nueces, endulzado naturalmente. Sin gluten y bajo en azúcar.",
+    "precio": 35.000,
+    "categoria": "pan",
+    "imagen": "cheesecake-limon.jpg",
+    "destacado": false
+  },
+  {
+    "id": 6,
+    "nombre": " Galleta Crocante de Limón y Chantilly de Rosas",
+    "descripcion": "Galleta rellena de crema de limón y chantilly vegetal de rosas, hecha con harinas de almendra y arroz, endulzada con estevia. Sin gluten y sin azúcar",
+    "precio": 40.000,
+    "categoria": "galletas",
+    "imagen": "cheesecake-limon.jpg",
+    "destacado": false
+  }
+]

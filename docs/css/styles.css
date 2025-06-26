@@ -1,0 +1,49 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.nav-link, .dropdown-item {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.btn-dark {
+  background: #2d1e16;
+  border: none;
+}
+.btn-outline-dark {
+  border: 1px solid #2d1e16;
+  color: #2d1e16;
+}
+.btn-outline-dark:hover {
+  background: #2d1e16;
+  color: #fff;
+}
+h1, h2, h4 {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.card {
+  border-radius: 1.25rem;
+}
+.card-img-top {
+  border-radius: 1.25rem 1.25rem 0 0;
+  height: 120px;
+  object-fit: cover;
+}
+.rounded-4 {
+  border-radius: 1.25rem !important;
+}
+.bg-warning.bg-opacity-10 {
+  background-color: #fff8e1 !important;
+}
+.blockquote {
+  font-size: 1.25rem;
+  color: #2d1e16;
+}
+footer .text-muted {
+  font-size: 0.95em;
+}
