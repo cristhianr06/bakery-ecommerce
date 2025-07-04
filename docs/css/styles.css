@@ -1,49 +1,172 @@
+@import url('variables.css');
+
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  background: #fff;
-  color: #222;
+  font-family: var(--poppins-font);
 }
-.navbar-brand {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+
+.bakery-logo {
+  width: 150px;
 }
-.nav-link, .dropdown-item {
-  font-size: 1rem;
+
+.banner {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-title {
+  font-family: var(--edu-qld-beginner);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--primary-color);
+}
+
+.hero-subtitle {
+  font-family: var(--poppins-font);
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.btn-view-products {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  transition: transform 0.3s ease;
+}
+
+.btn-view-products:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: scale(1.1);
+}
+
+.btn-view-more {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
   font-weight: 500;
+  padding: 15px 30px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
-.btn-dark {
-  background: #2d1e16;
-  border: none;
+
+.btn-view-more:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: scale(1.1);
 }
-.btn-outline-dark {
-  border: 1px solid #2d1e16;
-  color: #2d1e16;
+
+.nav-link {
+  font-weight: 300;
+  font-size: 1.2rem;
 }
-.btn-outline-dark:hover {
-  background: #2d1e16;
-  color: #fff;
+
+.section-featured,
+.container-section {
+  background-color: var(--primary-color);
+  background:
+    linear-gradient(#734300ef, #734300ef),
+    /* Capa de color */
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
 }
-h1, h2, h4 {
-  font-family: 'Montserrat', Arial, sans-serif;
+
+.container-section {
+  margin-top: 50px;
 }
-.card {
-  border-radius: 1.25rem;
+
+.container-muffins {
+  background-color: var(--primary-color);
+  background:
+    linear-gradient(#F1EBE4ef, #F1EBE4ef),
+    /* Capa de color */
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
 }
-.card-img-top {
-  border-radius: 1.25rem 1.25rem 0 0;
-  height: 120px;
-  object-fit: cover;
+
+.title-featured {
+  color: var(--white-color);
+  font-family: var(--edu-qld-beginner);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.8rem);
 }
-.rounded-4 {
-  border-radius: 1.25rem !important;
+
+.subtitle-featured {
+  color: var(--white-color);
+  font-weight: 300;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
-.bg-warning.bg-opacity-10 {
-  background-color: #fff8e1 !important;
+
+.card-product-title {
+  font-family: var(--edu-qld-beginner);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary-color);
 }
-.blockquote {
-  font-size: 1.25rem;
-  color: #2d1e16;
+
+.card-product-subtitle {
+  font-family: var(--poppins-font);
+  font-weight: 300;
+  font-size: 1.1rem;
 }
-footer .text-muted {
-  font-size: 0.95em;
+
+.title-section-1 {
+  color: var(--white-color);
+  font-family: var(--edu-qld-beginner);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.subtitle-section-1 {
+  color: var(--white-color);
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  font-weight: 300;
+}
+
+.title-section-2 {
+  color: var(--primary-color);
+  font-family: var(--edu-qld-beginner);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+.subtitle-section-2{
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  font-weight: 300;
+}
+.content-btn-products{
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.container-footer{
+  margin-top: 20px;
+  background: var(--primary-color);
+}
+.container-form-product{
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .bakery-logo {
+    width: 200px;
+  }
+
+  .container-section {
+    margin-top: 20px;
+  }
+  .container-form-product{
+  width: 70%;
+}
+}
+@media (min-width: 1024px) {
+  .container-form-product{
+  width: 40%;
+  }
 }
