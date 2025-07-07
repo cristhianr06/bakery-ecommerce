@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Contacto</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <title>Contacto</title>
-</head>
+  <body>
+    <!-- Header -->
+    <mi-nav></mi-nav>
+    <!-- Header -->
+    <section class="container py-5">
+      <h2>Contacto</h2>
+      <form id="formContacto">
+        <div class="mb-3">
+          <label class="form-label" for="user_name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="user_name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea
+            class="form-control"
+            id="mensaje"
+            rows="3"
+            name="mensaje"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+    <!-- Modal Carrito -->
+    <modal-carrito></modal-carrito>
+    <!-- Footer -->
+    <mi-footer></mi-footer>
 
-<body>
-  <!-- Header -->
-  <mi-nav></mi-nav>
-  <!-- Header -->
-  <section class="container py-5">
-    <h2>Contacto</h2>
-    <form id="formContacto">
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-  </section>
-  <!-- Modal Carrito -->
-  <modal-carrito></modal-carrito>
-  <!-- Footer -->
-  <mi-footer></mi-footer>
-  
-  <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="js/components/nav-component.js"></script>
-  <script src="js/components/footer-component.js"></script>
-  <script src="js/components/modal-carrito-component.js"></script>
-  <script type="module" src="js/carrito.js"></script>
-  <script>
-    document.getElementById('formContacto').onsubmit = function (e) {
-      e.preventDefault();
-      alert('Mensaje enviado. ¡Gracias por contactarnos!');
-      this.reset();
-    }
-  </script>
-</body>
-
+    <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components/nav-component.js"></script>
+    <script src="js/components/footer-component.js"></script>
+    <script src="js/components/modal-carrito-component.js"></script>
+    <script type="module" src="js/carrito.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="js/formulario-contacto.js"></script>
+  </body>
 </html>
