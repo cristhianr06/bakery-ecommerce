@@ -10,42 +10,26 @@
   <title>Productos</title>
 </head>
 
-<body>
+<body class="body-products">
   <!-- Header -->
   <mi-nav></mi-nav>
   <!-- Header -->
-  <section class="container py-5">
+  <section class="container py-5 container-products">
     <h2 class="mb-4" id="tituloCategoria"></h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3" id="listaProductos">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3" id="list-products">
       <!-- JS carga productos aquí según categoría -->
     </div>
   </section>
   <!-- Modal Carrito -->
-  <div class="modal fade" id="carritoModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Carrito de compras</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body" id="carritoContenido">
-          <!-- Productos en carrito por JS -->
-        </div>
-        <div class="modal-footer">
-          <a href="checkout.html" class="btn btn-brown">Procesar compra</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <modal-carrito></modal-carrito>
   <!-- Footer -->
   <mi-footer></mi-footer>
   <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="js/nav-component.js"></script>
-  <script src="js/footer-component.js"></script>
-  <script type="module" src="js/products-utils.js"></script>
-  <script type="module" src="js/products.js"></script>
+  <script src="js/components/nav-component.js"></script>
+  <script src="js/components/footer-component.js"></script>
+  <script src="js/components/modal-carrito-component.js"></script>
+  <script type="module" src="js/productos.js"></script>
   <script type="module" src="js/carrito.js"></script>
-  <script src="js/checkout.js"></script>
 </body>
 
 </html>

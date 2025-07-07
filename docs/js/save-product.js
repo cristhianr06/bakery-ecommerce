@@ -21,6 +21,7 @@ formProducts.addEventListener('submit', (e) => {
 
 const priceInput = document.querySelector('#product-price');
 
+//Formateo de precio
 priceInput.addEventListener('input', function(e) {
   // Elimina todo lo que no sea dígito
   let value = e.target.value.replace(/\D/g, '');

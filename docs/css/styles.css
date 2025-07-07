@@ -3,7 +3,15 @@
 body {
   font-family: var(--poppins-font);
 }
-
+.navbar-bakery{
+  background:
+    linear-gradient(#C17D44ef, #C17D44ef),
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 .bakery-logo {
   width: 150px;
 }
@@ -148,10 +156,29 @@ body {
 }
 .container-footer{
   margin-top: 20px;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
+  background:
+    linear-gradient(#734300ef, #734300ef),
+    /* Capa de color */
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
 }
 .container-form-product{
   width: 100%;
+}
+.body-products{
+  background-color: var(--white-color);;
+}
+.container-products{
+  background:
+    linear-gradient(#F1EBE4ef, #F1EBE4ef),
+    /* Capa de color */
+    url('../images/bg-pattern-bakery.jpg');
+  /* Imagen */
+  background-size: cover;
+  background-position: center;
 }
 @media (min-width: 768px) {
   .bakery-logo {
