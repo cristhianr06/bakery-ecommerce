@@ -24,14 +24,14 @@ function renderizarProductos({ productosSnapshot, filtro, contenedor }) {
     if (filtro(product)) {
       const priceFormat = product.price.toLocaleString("es-CO");
       html += `
-        <div class="col" data-aos="zoom-in">
-          <div class="card mb-4 rounded-3 shadow">
-            <img src="${product.urlImage}" class="card-img-top" alt="${product.name}">
-            <div class="card-body">
+        <div class="col mt-4" data-aos="zoom-in">
+          <div class="card h-100 d-flex flex-column mb-4 rounded-3 shadow card-product">
+            <div class="image-wrapper"><img src="${product.urlImage}" class="card-img-top" alt="${product.name}" ></div>
+            <div class="card-body d-flex flex-column">
               <h5 class="card-product-title">${product.name}</h5>
               <p class="card-product-subtitle">${product.description}</p>
-              <p class="card-text"><strong>$${priceFormat} COP</strong></p>
-              <button class="btn btn-success agregar-carrito" data-id="${doc.id}">Agregar al carrito</button>
+              <span class="card-text text-center card-product-price">$${priceFormat} COP</span>
+              <button class="btn btn-success py-2 agregar-carrito" data-id="${doc.id}"><i class="bi bi-cart-plus-fill me-2"></i>Agregar al carrito</button>
             </div>
           </div>
         </div>

@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Procesar Pedido</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <title>Procesar Pedido</title>
-</head>
-
-<body>
-  <!-- Header -->
-  <mi-nav></mi-nav>
-  <!-- Header -->
-  <section class="container py-5">
-    <h2>Finalizar compra</h2>
-    <div class="row">
-      <!-- Resumen del carrito -->
-      <div class="col-12 col-md-6 mb-4 mb-md-0">
-        <h4 class="mb-3">Resumen de tu pedido</h4>
-        <div class="table-responsive">
-          <table class="table align-middle" id="tablaCheckout">
-            <thead>
-              <tr>
-                <th>Producto</th>
-                <th class="text-center">Cantidad</th>
-                <th class="text-end">Precio</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- JS insertará aquí los productos del carrito -->
-            </tbody>
-            <tfoot>
-              <tr>
-                <th colspan="2" class="text-end">Total</th>
-                <th class="text-end" id="checkoutTotal">$0.00</th>
-              </tr>
-            </tfoot>
-          </table>
+  <body>
+    <!-- Header -->
+    <header>
+      <my-nav></my-nav>
+    </header>
+    <!-- Header -->
+    <section class="container py-5">
+      <h2>Finalizar compra</h2>
+      <div class="row">
+        <!-- Resumen del carrito -->
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <h4 class="mb-3">Resumen de tu pedido</h4>
+          <div class="table-responsive">
+            <table class="table align-middle" id="tablaCheckout">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th class="text-center">Cantidad</th>
+                  <th class="text-end">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- JS insertará aquí los productos del carrito -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="2" class="text-end">Total</th>
+                  <th class="text-end" id="checkoutTotal">$0.00</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <!-- Formulario de datos -->
+        <div class="col-12 col-md-6">
+          <form id="formCheckout">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" required />
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label"
+                >Dirección de envío</label
+              >
+              <input type="text" class="form-control" id="direccion" required />
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" required />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-success"
+              id="btnConfirmarPedido"
+            >
+              Confirmar pedido
+            </button>
+          </form>
         </div>
       </div>
-      <!-- Formulario de datos -->
-      <div class="col-12 col-md-6">
-        <form id="formCheckout">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" id="nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="direccion" class="form-label">Dirección de envío</label>
-            <input type="text" class="form-control" id="direccion" required>
-          </div>
-          <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="tel" class="form-control" id="telefono" required>
-          </div>
-          <button type="submit" class="btn btn-success" id="btnConfirmarPedido">Confirmar pedido</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <mi-footer></mi-footer>
-  <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="js/components/nav-component.js"></script>
-  <script src="js/components/footer-component.js"></script>
-  <script type="module" src="js/carrito.js"></script>
-  <script src="js/checkout.js"></script>
-  <script>
-    document.getElementById('formCheckout').onsubmit = function (e) {
-      e.preventDefault();
-      localStorage.removeItem('carrito');
-      alert('¡Pedido realizado con éxito!');
-      window.location.href = 'index.html';
-    }
-
-  </script>
-
-</body>
-
+    <!-- Footer -->
+    <my-footer></my-footer>
+    <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components/nav-component.js"></script>
+    <script src="js/components/footer-component.js"></script>
+    <script type="module" src="js/carrito.js"></script>
+    <script src="js/checkout.js"></script>
+    <script>
+      document.getElementById("formCheckout").onsubmit = function (e) {
+        e.preventDefault();
+        localStorage.removeItem("carrito");
+        alert("¡Pedido realizado con éxito!");
+        window.location.href = "index.html";
+      };
+    </script>
+  </body>
 </html>

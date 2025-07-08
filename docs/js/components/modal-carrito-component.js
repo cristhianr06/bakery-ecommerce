@@ -20,4 +20,4 @@ class ModalCarritoComponent extends HTMLElement{
         `
     }
 }
-customElements.define('modal-carrito', ModalCarritoComponent)
+customElements.define('modal-cart', ModalCarritoComponent)

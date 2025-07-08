@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Productos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <title>Productos</title>
-</head>
-
-<body class="body-products">
-  <!-- Header -->
-  <mi-nav></mi-nav>
-  <!-- Header -->
-  <section class="container py-5 container-products">
-    <h2 class="mb-4" id="tituloCategoria"></h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3" id="list-products">
-      <!-- JS carga productos aquí según categoría -->
-    </div>
-  </section>
-  <!-- Modal Carrito -->
-  <modal-carrito></modal-carrito>
-  <!-- Footer -->
-  <mi-footer></mi-footer>
-  <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <script src="js/components/nav-component.js"></script>
-  <script src="js/components/footer-component.js"></script>
-  <script src="js/components/modal-carrito-component.js"></script>
-  <script type="module" src="js/productos.js"></script>
-  <script type="module" src="js/carrito.js"></script>
-</body>
-
+  <body class="body-products">
+    <!-- Header -->
+    <header>
+      <my-nav></my-nav>
+    </header>
+    <!-- Header -->
+    <section class="container py-5 container-products">
+      <h2 class="fw-800 text-primary-color" id="tituloCategoria"></h2>
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3"
+        id="list-products"
+      >
+        <!-- JS carga productos aquí según categoría -->
+      </div>
+    </section>
+    <!-- Modal Carrito -->
+    <modal-cart></modal-cart>
+    <!-- Footer -->
+    <my-footer></my-footer>
+    <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components/nav-component.js"></script>
+    <script src="js/components/footer-component.js"></script>
+    <script src="js/components/modal-carrito-component.js"></script>
+    <script type="module" src="js/productos.js"></script>
+    <script type="module" src="js/carrito.js"></script>
+  </body>
 </html>

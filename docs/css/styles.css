@@ -1,7 +1,9 @@
 @import url('variables.css');
+@import url('clases.css');
 
 body {
-  font-family: var(--poppins-font);
+  font-family: var(--font-primary);
+  padding-top: 100px;
 }
 .navbar-bakery{
   background:
@@ -11,6 +13,12 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+.menu-sticky {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .bakery-logo {
   width: 150px;
@@ -27,14 +35,12 @@ body {
 }
 
 .hero-title {
-  font-family: var(--edu-qld-beginner);
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 4rem);
   color: var(--primary-color);
 }
 
 .hero-subtitle {
-  font-family: var(--poppins-font);
   font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 300;
   line-height: 1;
@@ -102,7 +108,6 @@ body {
 
 .title-featured {
   color: var(--white-color);
-  font-family: var(--edu-qld-beginner);
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 2.8rem);
 }
@@ -112,23 +117,71 @@ body {
   font-weight: 300;
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
+.card-product{
+  transition: transform 0.5s ease;
+}
+.card-product:hover{
+  transform: translateY(-20px);
+  z-index: 99;
+}
+.agregar-carrito{
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+.agregar-carrito:hover{
+  transform: scale(1.03);
+}
+.image-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.5) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.7s;
+  pointer-events: none;
+}
+
+.card-product:hover .image-wrapper::before {
+  left: 125%;
+  transition: left 0.7s;
+}
 
 .card-product-title {
-  font-family: var(--edu-qld-beginner);
   font-weight: 700;
   font-size: 1.6rem;
   color: var(--primary-color);
 }
 
 .card-product-subtitle {
-  font-family: var(--poppins-font);
   font-weight: 300;
   font-size: 1.1rem;
 }
-
+.card-product-price{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 .title-section-1 {
   color: var(--white-color);
-  font-family: var(--edu-qld-beginner);
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 2.5rem);
 }
@@ -141,7 +194,6 @@ body {
 
 .title-section-2 {
   color: var(--primary-color);
-  font-family: var(--edu-qld-beginner);
   text-transform: uppercase;
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 2.5rem);
@@ -180,7 +232,63 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.hero-about{
+  background: linear-gradient(#000000a9, #000000a9),
+  url('../images/bg/pastel-saliendo-del-horno.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title-about{
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.subtitle-about{
+  padding: 0 20px;
+  font-size: clamp(1rem, 5vw, 1.3rem);
+}
+.my-list, .my-list-2{
+  display: inline-block;
+  text-align: left;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+.text-header-about{
+  background: linear-gradient(#734300ef, #734300ef),
+  url('../images/bg-pattern-bakery.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 0;
+  border-radius: 5px;
+  color: #fff;
+}
+.my-list > li{
+  padding: 5px 0;
+  list-style-image: url('../images/icons/chef.png');
+  font-size: 1.2rem;
+}
+.my-list-2 > li{
+  padding: 5px 0;
+  list-style-image: url('../images/icons/check-24x.png');
+  font-size: 1.2rem;
+}
+.p-about{
+  font-size: 1.2rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.title-contacto{
+  font-size: clamp(2rem, 5vw, 3rem);
+}
 @media (min-width: 768px) {
+  .menu-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  }
   .bakery-logo {
     width: 200px;
   }
@@ -190,10 +298,19 @@ body {
   }
   .container-form-product{
   width: 70%;
-}
+  }
+  .subtitle-about{
+  padding: 0 50px;
+  }
+  .p-about{
+  hyphens: none;
+  }
 }
 @media (min-width: 1024px) {
   .container-form-product{
   width: 40%;
+  }
+  .subtitle-about{
+  padding: 0 200px;
   }
 }

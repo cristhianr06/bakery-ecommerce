@@ -23,4 +23,4 @@ class FooterComponent extends HTMLElement {
     `;
   }
 }
-customElements.define('mi-footer', FooterComponent);
+customElements.define('my-footer', FooterComponent);

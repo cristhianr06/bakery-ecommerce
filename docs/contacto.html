@@ -14,48 +14,60 @@
 
   <body>
     <!-- Header -->
-    <mi-nav></mi-nav>
+    <header>
+      <my-nav></my-nav>
+    </header>
     <!-- Header -->
     <section class="container py-5">
-      <h2>Contacto</h2>
-      <form id="formContacto">
-        <div class="mb-3">
-          <label class="form-label" for="user_name">Nombre</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombre"
-            name="user_name"
-            required
-          />
+      <h1 class="title-contacto fw-700 text-primary-color">Contacto</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <p>¿Tienes una pregunta, quieres hacer un pedido especial o necesitas asesoría para elegir el postre perfecto?<br/>¡Estamos aquí para ti!</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1407.9919758068477!2d-76.48778639904633!3d3.4938336721188636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a86fc4bb0c7f%3A0x26c3a3a3d5ad5432!2sPaso%20del%20Comercio%2C%20COMUNA%206%2C%20Cali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1752001106083!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-6">
+            <form id="formContacto">
+              <div class="mb-3">
+                <label class="form-label" for="user_name">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="user_name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  name="mensaje"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea
-            class="form-control"
-            id="mensaje"
-            rows="3"
-            name="mensaje"
-            required
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
+      </div>
     </section>
     <!-- Modal Carrito -->
-    <modal-carrito></modal-carrito>
+    <modal-cart></modal-cart>
     <!-- Footer -->
-    <mi-footer></mi-footer>
+    <my-footer></my-footer>
 
     <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <script src="js/components/nav-component.js"></script>

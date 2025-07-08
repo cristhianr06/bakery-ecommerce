@@ -1,7 +1,7 @@
 class NavComponent extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom sticky-top navbar-bakery">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom menu-sticky navbar-bakery">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html"><img src="images/Logos/Logo-Bakery-white.png" alt=""
           class="bakery-logo"></a>
@@ -70,4 +70,4 @@ class NavComponent extends HTMLElement {
     `;
   }
 }
-customElements.define('mi-nav', NavComponent);
+customElements.define('my-nav', NavComponent);
