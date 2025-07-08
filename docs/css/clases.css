@@ -35,3 +35,9 @@
 .text-white-color{
     color: var(--white-color);
 }
+.bg-primary-color{
+    background-color: var(--primary-color);
+}
+.bg-secondary-color{
+    background-color: var(--secondary-color);
+}
