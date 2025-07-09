@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Actualiza Productos</title>
-    <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <my-nav></my-nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="images/icons/Logo-Bakery-32-rounded.ico">
+  <title>Actualiza Productos</title>
+  <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Header -->
+  <header>
+    <my-nav></my-nav>
+  </header>
+  <main class="flex-fill py-4">
+    <div class="d-flex justify-content-center mt-5">
+      <h1 class="text-primary-color">Crear nuevo producto</h1>
+    </div>
     <div class="container my-4 container-form-product">
       <form class="col mw-100" id="form-products">
         <div class="col-auto">
@@ -25,9 +28,7 @@
           <input type="text" class="form-control" id="product-name" />
         </div>
         <div class="col-auto mt-3">
-          <label for="product-description" class="form-label"
-            >Descripción del producto</label
-          >
+          <label for="product-description" class="form-label">Descripción del producto</label>
           <textarea class="form-control" id="product-description"></textarea>
         </div>
         <div class="col-auto">
@@ -35,9 +36,7 @@
           <input type="text" class="form-control" id="product-price" />
         </div>
         <div class="col-auto mt-3">
-          <label for="product-category" class="form-label"
-            >Establece una categoria</label
-          >
+          <label for="product-category" class="form-label">Establece una categoria</label>
           <select class="form-select" id="product-category">
             <option selected>Abre este menú desplegable</option>
             <option value="pasteles">Pasteles</option>
@@ -47,46 +46,36 @@
           </select>
         </div>
         <div class="col-auto mt-3">
-          <label for="product-image" class="form-label"
-            >URL Imagen producto</label
-          >
+          <label for="product-image" class="form-label">URL Imagen producto</label>
           <input type="url" class="form-control" id="product-image" />
         </div>
         <div class="btn-group mt-3" role="group">
-          <input
-            type="checkbox"
-            class="btn-check"
-            id="product-featured"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-success" for="product-featured"
-            >Destacado</label
-          >
+          <input type="checkbox" class="btn-check" id="product-featured" autocomplete="off" />
+          <label class="btn btn-outline-success" for="product-featured">Destacado</label>
         </div>
         <div class="col-auto mt-3">
-          <button
-            type="submit"
-            class="btn btn-primary mb-3"
-            id="btn-add-product"
-          >
+          <button type="submit" class="btn btn-primary" id="btn-add-product">
             Agregar
           </button>
+          <a href="inventario.html" class="btn btn-secondary">Inventario</a>
         </div>
       </form>
     </div>
     <modal-cart></modal-cart>
-    <!-- Footer -->
-    <my-footer></my-footer>
+  </main>
+  <!-- Footer -->
+  <my-footer></my-footer>
 
-    <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-    <script src="js/components/nav-component.js"></script>
-    <script src="js/components/footer-component.js"></script>
-    <script src="js/components/modal-carrito-component.js"></script>
-    <script type="module" src="js/carrito.js"></script>
-    <script type="module" src="js/save-product.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+  <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components/nav-component.js"></script>
+  <script src="js/components/footer-component.js"></script>
+  <script src="js/components/modal-carrito-component.js"></script>
+  <script type="module" src="js/carrito.js"></script>
+  <script type="module" src="js/save-product.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/icons/Logo-Bakery-32-rounded.ico">
     <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -12,67 +13,69 @@
     <title>Procesar Pedido</title>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header>
       <my-nav></my-nav>
     </header>
     <!-- Header -->
-    <section class="container py-5">
-      <h2>Finalizar compra</h2>
-      <div class="row">
-        <!-- Resumen del carrito -->
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
-          <h4 class="mb-3">Resumen de tu pedido</h4>
-          <div class="table-responsive">
-            <table class="table align-middle" id="tablaCheckout">
-              <thead>
-                <tr>
-                  <th>Producto</th>
-                  <th class="text-center">Cantidad</th>
-                  <th class="text-end">Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- JS insertará aquí los productos del carrito -->
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="2" class="text-end">Total</th>
-                  <th class="text-end" id="checkoutTotal">$0.00</th>
-                </tr>
-              </tfoot>
-            </table>
+    <main class="flex-fill py-4">
+      <section class="container py-5">
+        <h2>Finalizar compra</h2>
+        <div class="row">
+          <!-- Resumen del carrito -->
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <h4 class="mb-3">Resumen de tu pedido</h4>
+            <div class="table-responsive">
+              <table class="table align-middle" id="tablaCheckout">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th class="text-center">Cantidad</th>
+                    <th class="text-end">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- JS insertará aquí los productos del carrito -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="2" class="text-end">Total</th>
+                    <th class="text-end" id="checkoutTotal">$0.00</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <!-- Formulario de datos -->
+          <div class="col-12 col-md-6">
+            <form id="formCheckout">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" required />
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label"
+                  >Dirección de envío</label
+                >
+                <input type="text" class="form-control" id="direccion" required />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" required />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-success"
+                id="btnConfirmarPedido"
+              >
+                Confirmar pedido
+              </button>
+            </form>
           </div>
         </div>
-        <!-- Formulario de datos -->
-        <div class="col-12 col-md-6">
-          <form id="formCheckout">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre completo</label>
-              <input type="text" class="form-control" id="nombre" required />
-            </div>
-            <div class="mb-3">
-              <label for="direccion" class="form-label"
-                >Dirección de envío</label
-              >
-              <input type="text" class="form-control" id="direccion" required />
-            </div>
-            <div class="mb-3">
-              <label for="telefono" class="form-label">Teléfono</label>
-              <input type="tel" class="form-control" id="telefono" required />
-            </div>
-            <button
-              type="submit"
-              class="btn btn-success"
-              id="btnConfirmarPedido"
-            >
-              Confirmar pedido
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <my-footer></my-footer>

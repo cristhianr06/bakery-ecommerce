@@ -22,9 +22,11 @@ function TotalProductos(productosSnapshot) {
   let html = "";
   productosSnapshot.forEach((doc) => {
     const product = doc.data();
+    const priceFormat = product.price.toLocaleString("es-CO");
     html += `
     <tr>
       <td>${product.name}</td>
+      <td>$${priceFormat} COP</td>
       <td class="d-grid gap-2 d-md-block text-center align-middle">
         <button class="btn btn-danger btn-delete" type="button" data-id="${doc.id}">Borrar</button>
         <button class="btn btn-success btn-edit" type="button" data-bs-toggle="modal" data-bs-target="#form-modal-products" data-id="${doc.id}">Editar</button>

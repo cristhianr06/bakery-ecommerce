@@ -2,9 +2,11 @@ import { onGetProducts } from "./firebase.js";
 import { agregarAlCarrito } from "./carrito.js";
 
 export let productosFirebase = [];
+const loadingDiv = document.getElementById('loading');
+const withoutProducts = document.querySelector('#without-products')
 
 // Función para renderizar productos
-function renderizarProductos({ productosSnapshot, filtro, contenedor }) {
+function renderizarProductos({ productosSnapshot, filtro, contenedor, loadingDiv }) {
   productosFirebase = [];
   let html = "";
   productosSnapshot.forEach((doc) => {
@@ -40,6 +42,18 @@ function renderizarProductos({ productosSnapshot, filtro, contenedor }) {
   });
   contenedor.innerHTML = html;
 
+  if (loadingDiv) {
+    loadingDiv.style.display = 'none';
+  }
+
+  if(html === ''){
+    withoutProducts.style.display = 'block';
+    const params = new URLSearchParams(window.location.search);
+    const categoria = params.get("cat");
+    let text = document.querySelector('#text-without-products')
+    text.textContent = `Lo sentimos en el momento no tenemos ${categoria}`
+  }
+
   // Asignar eventos a los botones
   const botones = contenedor.querySelectorAll(".agregar-carrito");
   botones.forEach((boton) => {
@@ -71,6 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
           ? (product) => product.category === categoria
           : () => true,
         contenedor: containerProducts,
+        loadingDiv
       });
     }
 
@@ -80,6 +95,7 @@ window.addEventListener("DOMContentLoaded", () => {
         productosSnapshot,
         filtro: (product) => product.featured,
         contenedor: containerFeatured,
+        loadingDiv
       });
     }
   });

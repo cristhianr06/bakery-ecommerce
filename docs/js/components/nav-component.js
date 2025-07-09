@@ -15,10 +15,10 @@ class NavComponent extends HTMLElement {
             <a class="nav-link dropdown-toggle text-light" href="#" id="categoriasDropdown"
               data-bs-toggle="dropdown">Productos</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="productos.html?cat=pasteles">Pasteles</a></li>
-              <li><a class="dropdown-item" href="productos.html?cat=galletas">Galletas</a></li>
-              <li><a class="dropdown-item" href="productos.html?cat=postres">Postres</a></li>
-              <li><a class="dropdown-item" href="productos.html?cat=pan">Pan</a></li>
+              <li><a class="dropdown-item" href="/bakery-ecommerce/productos.html?cat=pasteles">Pasteles</a></li>
+              <li><a class="dropdown-item" href="/bakery-ecommerce/productos.html?cat=galletas">Galletas</a></li>
+              <li><a class="dropdown-item" href="/bakery-ecommerce/productos.html?cat=postres">Postres</a></li>
+              <li><a class="dropdown-item" href="/bakery-ecommerce/productos.html?cat=pan">Pan</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link text-light" href="acerca.html">Acerca de</a></li>
@@ -32,41 +32,14 @@ class NavComponent extends HTMLElement {
             </a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link position-relative text-light" href="#" id="carritoBtn" data-bs-toggle="modal" data-bs-target="#form-modal">
-              <i class="bi bi-person-fill" style="font-size:22px;"></i>
+            <a class="nav-link position-relative text-light" href="inventario.html" id="config-product">
+              <i class="bi bi-gear-fill"></i>
             </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Modal -->
-<div class="modal fade" id="form-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Login Admin</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="col mw-100">
-      <div class="col-auto">
-        <label for="user-email" class="form-label">Correo</label>
-        <input type="email" class="form-control" id="user-email">
-      </div>
-      <div class="col-auto mt-3">
-        <label for="user-password" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="user-password">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-success">Login</button>
-      </div>
-    </form>
-      </div>
-    </div>
-  </div>
-</div>
     `;
   }
 }

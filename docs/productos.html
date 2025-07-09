@@ -1,41 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <title>Productos</title>
-  </head>
 
-  <body class="body-products">
-    <!-- Header -->
-    <header>
-      <my-nav></my-nav>
-    </header>
-    <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="images/icons/Logo-Bakery-32-rounded.ico">
+  <link rel="stylesheet" href="lib/bootstrap-5.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <title>Productos</title>
+</head>
+
+<body class="body-products d-flex flex-column min-vh-100">
+  <!-- Header -->
+  <header>
+    <my-nav></my-nav>
+  </header>
+  <!-- Header -->
+  <main class="flex-fill container py-4">
     <section class="container py-5 container-products">
-      <h2 class="fw-800 text-primary-color" id="tituloCategoria"></h2>
-      <div
-        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3"
-        id="list-products"
-      >
+      <h2 class="fw-800 text-primary-color titulo-productos" id="tituloCategoria"></h2>
+      <div id="loading" style="display: flex; justify-content: center; align-items: center;">
+        <dotlottie-player src="https://lottie.host/526b0abd-aba8-4010-b4bf-999bf36d099e/dTmtE5u4dx.lottie"
+          background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+      </div>
+      <div id="contenedor-productos"></div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3" id="list-products">
         <!-- JS carga productos aquí según categoría -->
+      </div>
+      <div class="row" id="without-products" style="display: none;">
+        <div class="col-12 text-center">
+          <h3 id="text-without-products">Lo sentimos en el momento no tenemos</h3>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <dotlottie-player
+            src="https://lottie.host/cb87cc07-9341-4108-ab60-c9fe4a78fdbf/gh3SmtTXUx.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+                    ></dotlottie-player>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Modal Carrito -->
     <modal-cart></modal-cart>
-    <!-- Footer -->
-    <my-footer></my-footer>
-    <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-    <script src="js/components/nav-component.js"></script>
-    <script src="js/components/footer-component.js"></script>
-    <script src="js/components/modal-carrito-component.js"></script>
-    <script type="module" src="js/productos.js"></script>
-    <script type="module" src="js/carrito.js"></script>
-  </body>
+  </main>
+  <!-- Footer -->
+  <my-footer></my-footer>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="lib/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components/nav-component.js"></script>
+  <script src="js/components/footer-component.js"></script>
+  <script src="js/components/modal-carrito-component.js"></script>
+  <script type="module" src="js/productos.js"></script>
+  <script type="module" src="js/carrito.js"></script>
+</body>
+
 </html>

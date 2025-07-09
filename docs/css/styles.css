@@ -282,6 +282,10 @@ body {
 .title-contacto{
   font-size: clamp(2rem, 5vw, 3rem);
 }
+.titulo-productos::first-letter{
+  text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
   .menu-sticky {
   position: fixed;
